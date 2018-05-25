@@ -20,7 +20,7 @@ Score Management Page
     - Scores will be displayed with the Par score for the course, the score the user entered and the date the score was captured.
     - An insert window on the page will display their current calculated handicap.
 
-#Project Overview
+# Project Overview
 The Golf Project App will allow users to log in. Users will be able to enter their scores, enter the number of putts they made and take notes that they want to capture in a notes section.
 
 Users will also be able to update scores, delete scores, and have the app determine their handicap after they've played at least 3 rounds. Handicaps will be based on USGA rules for handicapping.
