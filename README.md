@@ -1,5 +1,4 @@
 # U of M Golf Course Score Tracking App
-Group Project 2 for code bootcamp
 Persona, User Stories, Data Structure: https://docs.google.com/document/d/17xVdjNVwEDpMz-LQwW1o9AHcS_0NBCL5sgAg7i_aLkM/edit
 
 # Features 
