@@ -10,8 +10,14 @@ Course Selection Page
     a grid where they will select the course they will be playing at. Once a selection is made, they will be redirected to the Score Management page
 
 Score Management Page
-    - Users will be presented with a tree view of the courses they played at, along with the scores that they entered.
-    Scores will be displayed with the Par score for the course, the score the user entered and the date the score was captured.
+    - Users will be presented with a picture of each hole along with the yardage. 
+    - Users will have the ability to scroll through the holes.
+    - Users will have the ability to enter their score for that hole.
+    - Users will have the ability to enter the number of putts they made on that hole.
+    - Users will have the ability to take notes on each hole that will be captured for users to look at.
+    - Users will be presented with detailed hole information.
+    - Users will be able to see the scores they posted previously for each hole.
+    - Scores will be displayed with the Par score for the course, the score the user entered and the date the score was captured.
     - An insert window on the page will display their current calculated handicap.
 
 #Project Overview
