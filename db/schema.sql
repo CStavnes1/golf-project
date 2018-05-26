@@ -17,7 +17,9 @@ CREATE TABLE Course (
     dt1 INT NOT NULL,
     dt2 INT NOT NULL,
     dt3 INT NOT NULL,
-    mapurl VARCHAR(250)   
+    mapurl VARCHAR(250),
+    pacemark INT NOT NULL,
+    holecap INT NOT NULL,   
 );
 
 CREATE TABLE Score (
