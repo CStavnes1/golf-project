@@ -1,0 +1,26 @@
+{
+  "name": "golf-project",
+  "version": "1.0.0",
+  "description": "Persona, User Stories, Data Structure: https://docs.google.com/document/d/17xVdjNVwEDpMz-LQwW1o9AHcS_0NBCL5sgAg7i_aLkM/edit",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CStavnes1/golf-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CStavnes1/golf-project/issues"
+  },
+  "homepage": "https://github.com/CStavnes1/golf-project#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.15.0"
+  }
+}
