@@ -16,11 +16,11 @@ var connection = mysql.createConnection({
 
   host: "localhost",
 
-  user: "root",
+  user: "",
 
   password: "",
 
-  database: "burgers_db"
+  database: "uofmn"
 
 });
 
