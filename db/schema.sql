@@ -4,11 +4,13 @@ USE uofmn;
 
 CREATE TABLE Users (
 	userid INT AUTO_INCREMENT NOT NULL,
-    playername VARCHAR (100) NOT NULL,
-    username VARCHAR (40) NOT NULL,
     accountpass VARCHAR (40) NOT NULL,
-    mymatches VARCHAR (400),
-    myhandicap INT, 
+    playername VARCHAR (100) NOT NULL,
+    playerusername VARCHAR (40) NOT NULL,
+    playermatches VARCHAR (400),
+    playerhandicap INT,
+    playeravgscore DECIMAL (10,2),
+    playeravgputtsperhole DECIMAL (10,2),
     PRIMARY KEY (userid)
 );
 

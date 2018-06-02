@@ -15,7 +15,7 @@ function objToSql(ob) {
 // The ORM 
 var orm = {
     all: function(tableInput, cb) {
-      var queryString = "SELECT * FROM " + tableInput + " WHERE userid='1';"// WHERE THE PLAYER ID is "this player's ID" 
+      var queryString = "SELECT * FROM " + tableInput + " WHERE userid='11';"// WHERE THE PLAYER ID is "this player's ID" 
       console.log(queryString);// log the query string before we use it 
       connection.query(queryString, function(err, result) {
         if (err) {
