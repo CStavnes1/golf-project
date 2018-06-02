@@ -24,6 +24,7 @@ router.get('/', function (req, res) {
 });
 
 router.get('/player', function (req, res) {
+<<<<<<< HEAD
     // this quick statement allows it to run without error 
     var userid = 1;
     // this is where we have to pass in a "userID" value from the login mechanism
@@ -43,8 +44,16 @@ router.get('/player', function (req, res) {
         // ADD CODE HERE: check if the user is still authenticated using local or session storage , if they are , render the page
         res.render("player", hbsObject);
         // if they are not, return them to the login page 
+=======
+    // golfer.all(userid, function(data) {
+    //     var hbsObject = {
+    //       users: data
+    //     };
+    //     console.log(hbsObject);
+        res.render("player");
+>>>>>>> 45d220062cf461aed23f2a1177310af33c399704
       });
-});
+// });
 
 router.get('/hole', function (req, res) {
     res.render('hole');
