@@ -8,6 +8,7 @@ CREATE TABLE Users (
     username VARCHAR (40) NOT NULL,
     accountpass VARCHAR (40) NOT NULL,
     mymatches VARCHAR (400),
+    myhandicap INT, 
     PRIMARY KEY (userid)
 );
 
@@ -30,5 +31,5 @@ CREATE TABLE Score (
     playerputts INT NOT NULL,
     playernotes VARCHAR (1000),
     userid INT,
-    FOREIGN KEY (userid) REFERENCES Users(userid)
+    FOREIGN KEY (userid) REFERENCES users(userid)
 );

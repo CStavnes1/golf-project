@@ -1,7 +1,7 @@
 
 var express = require('express');
 var router = express.Router();
-var golf = require('../models/golf.js');
+var golfer = require('../models/golfer.js');
 
 // Index redirect
 
@@ -10,7 +10,13 @@ router.get('/', function (req, res) {
 });
 
 router.get('/player', function (req, res) {
-    res.render('player');
+    golfer.all(function(data) {
+        var hbsObject = {
+          users: data
+        };
+        console.log(hbsObject);
+        res.render("player", hbsObject);
+      });
 });
 
 router.get('/hole', function (req, res) {
