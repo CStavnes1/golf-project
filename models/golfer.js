@@ -1,10 +1,10 @@
 // Import the ORM 
 var orm = require("../config/orm.js");
 
-// call the ORM functions using burger specific input for the ORM
+// call the ORM functions using golfer specific input for the ORM
 var golfer = {
-    all: function(cb) {
-      orm.all("users", function(res) {
+    all: function(userid, cb) {
+      orm.all("users", userid, function(res) {
         cb(res);
       });
     },
