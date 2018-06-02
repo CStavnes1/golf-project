@@ -3,12 +3,12 @@ CREATE DATABASE uofmn;
 USE uofmn;
 
 CREATE TABLE Users (
-	id INT AUTO_INCREMENT NOT NULL,
+	userid INT AUTO_INCREMENT NOT NULL,
     playername VARCHAR (100) NOT NULL,
     username VARCHAR (40) NOT NULL,
     accountpass VARCHAR (40) NOT NULL,
     mymatches VARCHAR (400),
-    PRIMARY KEY (id)
+    PRIMARY KEY (userid)
 );
 
 CREATE TABLE Course (
@@ -19,16 +19,16 @@ CREATE TABLE Course (
     dt3 INT NOT NULL,
     pacemark INT NOT NULL,
     holecap INT NOT NULL,  
-    mapurl VARCHAR(250), 
+    mapurl VARCHAR(250) 
 );
 
 CREATE TABLE Score (
-	id INT AUTO_INCREMENT NOT NULL,
     tstamp TIMESTAMP,
     playerhole INT NOT NULL,
     playertee INT NOT NULL,
     playerscore INT NOT NULL,
     playerputts INT NOT NULL,
     playernotes VARCHAR (1000),
-    PRIMARY KEY (id)
+    userid INT,
+    FOREIGN KEY (userid) REFERENCES Users(userid)
 );
