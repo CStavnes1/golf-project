@@ -26,12 +26,14 @@ CREATE TABLE Course (
 );
 
 CREATE TABLE Score (
+	matchid INT AUTO_INCREMENT NOT NULL,
     tstamp TIMESTAMP,
     playerhole INT NOT NULL,
     playertee INT NOT NULL,
     playerscore INT NOT NULL,
     playerputts INT NOT NULL,
     playernotes VARCHAR (1000),
+    PRIMARY KEY (matchid),
     userid INT,
     FOREIGN KEY (userid) REFERENCES users(userid)
 );
