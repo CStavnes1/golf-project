@@ -51,3 +51,6 @@ VALUES (17, 3, 137, 145, 151, 113, 15, "https://www.google.com/maps/place/Les+Bo
 
 INSERT INTO Course 
 VALUES (18, 4, 396, 409, 414, 127, 7, "https://www.google.com/maps/place/Les+Bolstad+Golf+Course+Main+Office/@44.9934751,-93.1950744,195m/data=!3m1!1e3!4m5!3m4!1s0x0:0x23ab5e6d7ae6b3c7!8m2!3d44.9921644!4d-93.1960703");
+
+INSERT INTO users
+VALUES (11, "asodifjasodifjoajsidf", "Joe Finnegan", "finne132", 12, 14, 82.5, 2.3);
