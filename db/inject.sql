@@ -1,3 +1,16 @@
+/*USER RECORDS*/
+INSERT INTO users
+VALUES (11, "asodifjasodifjoajsidf", "Joe Finnegan", "finne132", 12, 14, 82.5, 2.3);
+INSERT INTO users
+VALUES (11, "asodifjasodifjoajsidf", "Esteban Armendariz", "esteban123", 10, 22, 90.5, 3.3);
+INSERT INTO users
+VALUES (11, "asodifjasodifjoajsidf", "Sean Flick", "flicker123", 6, 15, 95, 2.6);
+INSERT INTO users
+VALUES (11, "asodifjasodifjoajsidf", "Chris Stavnes", "stav123", 32, 20, 100, 2.0);
+
+
+
+/*COURSE RECORDS*/
 INSERT INTO Course 
 VALUES (1, 4, 375, 393, 399, 14, 4, "https://www.google.com/maps/place/Les+Bolstad+Golf+Course+Main+Office/@44.9940739,-93.1973387,330m/data=!3m1!1e3!4m5!3m4!1s0x0:0x23ab5e6d7ae6b3c7!8m2!3d44.9921644!4d-93.1960703");
 
@@ -54,3 +67,42 @@ VALUES (18, 4, 396, 409, 414, 127, 7, "https://www.google.com/maps/place/Les+Bol
 
 INSERT INTO users
 VALUES (1, "asodifjasodifjoajsidf", "Joe Finnegan", "finne132", 12, 14, 82.5, 2.3);
+
+
+/*SCORE RECORDS*/
+INSERT INTO score
+VALUES ((NOW()), 1, "white", 5, 2, "missed green to the left", 11);
+INSERT INTO score
+VALUES ((NOW()), 2, "white", 4, 2, "hit fairway awesome par", 11);
+INSERT INTO score
+VALUES ((NOW()), 3, "white", 5, 3, "bad three putt", 11);
+INSERT INTO score
+VALUES ((NOW()), 4, "white", 5, 2, "missed green to the left", 11);
+INSERT INTO score
+VALUES ((NOW()), 5, "white", 4, 2, "hit fairway awesome par", 11);
+INSERT INTO score
+VALUES ((NOW()), 6, "white", 5, 3, "bad three putt", 11);
+INSERT INTO score
+VALUES ((NOW()), 7, "white", 5, 2, "", 11);
+INSERT INTO score
+VALUES ((NOW()), 8, "white", 4, 2, "", 11);
+INSERT INTO score
+VALUES ((NOW()), 9, "white", 5, 3, "", 11);
+INSERT INTO score
+VALUES ((NOW()), 10, "white", 5, 2, "", 11);
+INSERT INTO score
+VALUES ((NOW()), 11, "white", 4, 2, "hit fairway awesome par", 11);
+INSERT INTO score
+VALUES ((NOW()), 12, "white", 5, 3, "", 11);
+INSERT INTO score
+VALUES ((NOW()), 13, "white", 5, 3, "bad three putt", 11);
+INSERT INTO score
+VALUES ((NOW()), 14, "white", 5, 2, "missed fairway", 11);
+INSERT INTO score
+VALUES ((NOW()), 15, "white", 4, 2, "", 11);
+INSERT INTO score
+VALUES ((NOW()), 16, "white", 5, 3, "missed fairway", 11);
+INSERT INTO score
+VALUES ((NOW()), 17, "white", 4, 2, "", 11);
+INSERT INTO score
+VALUES ((NOW()), 18, "white", 5, 3, "finished strong on 18", 11);
