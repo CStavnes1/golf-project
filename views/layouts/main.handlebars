@@ -16,6 +16,53 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!-- local stylesheet -->
     <link href="public/golf.css" rel="stylesheet">
+
+
+{{!-- authentication --}}
+
+     <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+       <script>
+         // Initialize Firebase
+         var config = {
+           apiKey: "AIzaSyD0Nq1TeKZXjMFmlhzJCYgUAA681BJ5p5E",
+           authDomain: "golf-project-8d8b7.firebaseapp.com",
+           databaseURL: "https://golf-project-8d8b7.firebaseio.com",
+           projectId: "golf-project-8d8b7",
+           storageBucket: "golf-project-8d8b7.appspot.com",
+           messagingSenderId: "162088668938"
+         };
+         firebase.initializeApp(config);
+           
+       </script>
+   
+
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.css" />
+    <script type="text/javascript">
+      // FirebaseUI config.
+      var uiConfig = {
+
+        // aqui va el Url al conectarse 
+        signInSuccessUrl: '/player',
+        signInOptions: [
+          // Leave the lines as is for the providers you want to offer your users.
+          firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+     
+          firebase.auth.EmailAuthProvider.PROVIDER_ID,
+    
+        ],
+        // Terms of service url.
+        tosUrl: '<your-tos-url>'
+      };
+
+      // Initialize the FirebaseUI Widget using Firebase.
+      var ui = new firebaseui.auth.AuthUI(firebase.auth());
+      // The start method will wait until the DOM is loaded.
+      ui.start('#firebaseui-auth-container', uiConfig);
+    </script>
+
+
+
   </head>
   <body>
       <div>

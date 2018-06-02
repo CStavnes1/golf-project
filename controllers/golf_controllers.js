@@ -24,14 +24,14 @@ router.get('/', function (req, res) {
 });
 
 router.get('/player', function (req, res) {
-    golfer.all(userid, function(data) {
-        var hbsObject = {
-          users: data
-        };
-        console.log(hbsObject);
-        res.render("player", hbsObject);
+    // golfer.all(userid, function(data) {
+    //     var hbsObject = {
+    //       users: data
+    //     };
+    //     console.log(hbsObject);
+        res.render("player");
       });
-});
+// });
 
 router.get('/hole', function (req, res) {
     res.render('hole');
