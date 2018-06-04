@@ -2,6 +2,9 @@
 var express = require('express');
 var router = express.Router();
 var golfer = require('../models/golfer.js');
+var firebase = require('firebase');
+
+var app = firebase.initializeApp({ });
 
 function authenticate() {
     // authentication occurs 
@@ -29,7 +32,18 @@ router.get('/player', function (req, res) {
     //       users: data
     //     };
     //     console.log(hbsObject);
+    
         res.render("player");
+        
+//         firebase.initializeApp().auth().getUserByEmail(email)
+//   .then(function(userRecord) {
+//     // See the UserRecord reference doc for the contents of userRecord.
+//     console.log("Successfully fetched user data:", userRecord.toJSON());
+//   })
+//   .catch(function(error) {
+//     console.log("Error fetching user data:", error);
+//   });
+
       });
 // });
 
