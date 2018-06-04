@@ -2,6 +2,8 @@
 var express = require('express');
 var router = express.Router();
 var golfer = require('../models/golfer.js');
+var hole = require('../models/hole.js');
+var history = require('../models/history.js');
 
 function authenticate() {
     // authentication occurs 
@@ -25,7 +27,7 @@ router.get('/', function (req, res) {
 
 router.get('/player', function (req, res) {
     // this quick statement allows it to run without error 
-    var userid = 1;
+    var userid = 2;
     // this is where we have to pass in a "userID" value from the login mechanism
     golfer.all(userid, function(data) {
         var hbsObject = {
@@ -47,11 +49,31 @@ router.get('/player', function (req, res) {
 });
 
 router.get('/hole', function (req, res) {
-    res.render('hole');
+    var holeid = 1;
+    //holeid will be the same as hole number
+    hole.all(holeid, function(data) {
+
+        var hbsObject = {
+            course: data
+        };
+        console.log(hbsObject)
+        res.render("hole", hbsObject);
+    });
+    
 });
 
 router.get('/history', function (req, res) {
-    res.render('history');
+    var playerhole = 1;
+    //playerhole = hole will be the same as hole number
+    history.all(playerhole, function(data) {
+
+        var hbsObject = {
+            score: data
+        };
+        console.log(hbsObject)
+        res.render("history", hbsObject);
+    });
+    
 });
 
 

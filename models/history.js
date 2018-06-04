@@ -1,10 +1,10 @@
 // Import the ORM 
-var orm = require("../config/holeorm.js");
+var orm = require("../config/historyorm.js");
 
 // call the ORM functions using golfer specific input for the ORM
-var hole = {
-    all: function(holeid, cb) {
-      orm.all("course", holeid, function(res) {
+var history = {
+    all: function(playerhole, cb) {
+      orm.all("score", playerhole, function(res) {
         cb(res);
       });
     },
@@ -22,4 +22,4 @@ var hole = {
   };
 
 // Export the database functions
-module.exports = hole;
+module.exports = history;
