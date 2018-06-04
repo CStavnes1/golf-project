@@ -17,53 +17,100 @@
     <!-- local stylesheet -->
     <link rel='stylesheet' type='text/css' href='/golf.css'/>
 
+    <!-- AUTHENTICATION --> 
 
-{{!-- authentication --}}
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
 
-     <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
-       <script>
-         // Initialize Firebase
-         var config = {
-           apiKey: "AIzaSyD0Nq1TeKZXjMFmlhzJCYgUAA681BJ5p5E",
-           authDomain: "golf-project-8d8b7.firebaseapp.com",
-           databaseURL: "https://golf-project-8d8b7.firebaseio.com",
-           projectId: "golf-project-8d8b7",
-           storageBucket: "golf-project-8d8b7.appspot.com",
-           messagingSenderId: "162088668938"
-         };
-         firebase.initializeApp(config);
-           
-       </script>
-   
+  <script type="text/javascript">
 
-    <script src="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.css" />
-    <script type="text/javascript">
-      // FirebaseUI config.
-      var uiConfig = {
-
-        // aqui va el Url al conectarse 
-        signInSuccessUrl: '/player',
-        signInOptions: [
-          // Leave the lines as is for the providers you want to offer your users.
-          firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-     
-          firebase.auth.EmailAuthProvider.PROVIDER_ID,
-    
-        ],
-        // Terms of service url.
-        tosUrl: '<your-tos-url>'
-      };
-
-      // Initialize the FirebaseUI Widget using Firebase.
-      var ui = new firebaseui.auth.AuthUI(firebase.auth());
-      // The start method will wait until the DOM is loaded.
-      ui.start('#firebaseui-auth-container', uiConfig);
-    </script>
-
-
-
+  var config = {
+    apiKey: "AIzaSyD0Nq1TeKZXjMFmlhzJCYgUAA681BJ5p5E",
+    authDomain: "golf-project-8d8b7.firebaseapp.com",
+    databaseURL: "https://golf-project-8d8b7.firebaseio.com",
+    projectId: "golf-project-8d8b7",
+    storageBucket: "golf-project-8d8b7.appspot.com",
+    messagingSenderId: "162088668938"
+  };
+firebase.initializeApp(config);
+    /**
+     * Function called when clicking the Login/Logout button.
+     */
+    // [START buttoncallback]
+    function toggleSignIn() {
+      if (!firebase.auth().currentUser) {
+        // [START createprovider]
+        var provider = new firebase.auth.GoogleAuthProvider();
+        // [END createprovider]
+        // [START addscopes]
+        provider.addScope('https://www.googleapis.com/auth/plus.login');
+        // [END addscopes]
+        // [START signin]
+        firebase.auth().signInWithRedirect(provider);
+        // [END signin]
+      } else {
+        // [START signout]
+        firebase.auth().signOut();
+        // [END signout]
+      }
+      // [START_EXCLUDE]
+      document.getElementById('quickstart-sign-in').disabled = true;
+      // [END_EXCLUDE]
+    }
+    // [END buttoncallback]
+    /**
+     * initApp handles setting up UI event listeners and registering Firebase auth listeners:
+     *  - firebase.auth().onAuthStateChanged: This listener is called when the user is signed in or
+     *    out, and that is where we update the UI.
+     *  - firebase.auth().getRedirectResult(): This promise completes when the user gets back from
+     *    the auth redirect flow. It is where you can get the OAuth access token from the IDP.
+     */
+    function initApp() {
+      // Result from Redirect auth flow.
+      // [START getidptoken]
+      firebase.auth().getRedirectResult().then(function(result) {
+        if (result.credential) {
+          // This gives you a Google Access Token. You can use it to access the Google API.
+          var token = result.credential.accessToken;
+          // [START_EXCLUDE]
+          document.getElementById('quickstart-oauthtoken').textContent = token;
+        } else {
+          document.getElementById('quickstart-oauthtoken').textContent = 'null';
+          // [END_EXCLUDE]
+        }
+        // The signed-in user info.
+        var user = result.user;
+      }).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // The email of the user's account used.
+        var email = error.email;
+        // The firebase.auth.AuthCredential type that was used.
+        var credential = error.credential;
+        // [START_EXCLUDE]
+        if (errorCode === 'auth/account-exists-with-different-credential') {
+          alert('You have already signed up with a different auth provider for that email.');
+          // If you are using multiple auth providers on your app you should handle linking
+          // the user's accounts here.
+        } else {
+          console.error(error);
+        }
+        // [END_EXCLUDE]
+      });
+      // [END getidptoken]
+      // Listening for auth state changes.
+      // [START authstatelistener]
+      document.getElementById('quickstart-sign-in').addEventListener('click', toggleSignIn, false);
+    }
+    window.onload = function() {
+      initApp();
+    };
+  </script>
   </head>
+  <header>
+      <!-- Container for the demo -->
+          <button disabled class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in">Sign in with Google</button>
+  </header>
   <body>
     <center>
     <div class="main">
@@ -71,10 +118,18 @@
       {{{ body }}}
     </div>
     <hr>
-    <footer class=" center footer">
+    <footer class="center footer">
       <center>
         <div class="container">
-          <p>Code Bootcamp Project - 2018</p>
+           Information for DEBUGGING:
+          <!-- Container where we'll display the user details -->
+          <div class="quickstart-user-details-container">
+            Firebase sign-in status: <span id="quickstart-sign-in-status">Unknown</span>
+            <div>Firebase auth <code>currentUser</code> object value:</div>
+            <pre><code id="quickstart-account-details">null</code></pre>
+            <div>Google OAuth Access Token:</div>
+            <pre><code id="quickstart-oauthtoken">null</code></pre>
+          </div>
         </div>
       </center>
     </footer>
