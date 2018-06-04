@@ -1,3 +1,65 @@
+
+/*STYLING FOR INDEX*/
+.main {
+	color: #05a58d;
+	background-color: #4c4947;
+	margin-top: 15%;
+	padding: 10%;
+}
+
+
+
+/*STYLING FOR PLAYER PAGE*/
+.profile-usertitle {
+	margin-top: 10px;
+	padding: 5px;
+}
+
+.profile-usertitle-name {
+	font-size: 34px;
+}
+
+.stats {
+	padding: 5px;
+	margin-bottom: 5px;
+}
+.profile-usertitle-handicap {
+	font-size: 18px;
+}
+
+.profile-stat-text {
+	color: #ceccce;
+	font-size: 18px;
+}
+
+.profile-stat-title {
+	color: #efedef;
+}
+
+.profile-userbuttons {
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+.button-history {
+	background-color: #efedef;
+	color: #05a58d;
+}
+
+.button-match {
+	background-color: #efedef;
+	color: #05a58d;
+}
+
+/*STYLING FOR HOLE PAGE*/
+.img-responsive {
+	transform: rotate(90deg);
+	height: 300px;
+	width:100px;
+}
+
+
+/*STYLING FOR HISTORY PAGE*/
 .front9, .back9 {
 	margin-bottom: 1em;
 	.hole {

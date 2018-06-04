@@ -15,7 +15,7 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!-- local stylesheet -->
-    <link href="public/golf.css" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' href='/golf.css'/>
 
 
 {{!-- authentication --}}
@@ -65,15 +65,19 @@
 
   </head>
   <body>
-      <div>
-    <!-- handlebars body -->
+    <center>
+    <div class="main">
+      <!-- handlebars body -->
       {{{ body }}}
-      </div>
-      <hr>
-      <footer class=" center footer">
+    </div>
+    <hr>
+    <footer class=" center footer">
+      <center>
         <div class="container">
           <p>Code Bootcamp Project - 2018</p>
         </div>
-      </footer>
+      </center>
+    </footer>
   </body>
-</html>
+  
+  </html>
