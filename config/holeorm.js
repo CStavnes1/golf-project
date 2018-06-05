@@ -13,9 +13,9 @@ function objToSql(ob) {
 }
 
 // The ORM 
-var orm = {
-    all: function(tableInput, userid, cb) {
-      var queryString = "SELECT * FROM " + tableInput + " WHERE userid='"+ userid + "';" // WHERE THE PLAYER ID is "this player's ID" 
+var holeorm = {
+    all: function(tableInput, holeid, cb) {
+      var queryString = "SELECT * FROM " + tableInput + " WHERE hole='"+ holeid + "';" // WHERE THE PLAYER ID is "this player's ID" 
       console.log(queryString);// log the query string before we use it 
       connection.query(queryString, function(err, result) {
         if (err) {
@@ -25,7 +25,7 @@ var orm = {
       });
     },
 
-
+    
     create: function(table, cols, vals, cb) {
       var queryString = "INSERT INTO " + table; // add the rest of the shit here for what has to happen with the create
       console.log(queryString);// log the query string before we use it 
@@ -51,4 +51,4 @@ var orm = {
 
 // Export the ORM object in module.exports
 
-module.exports=orm;
+module.exports=holeorm;

@@ -1,10 +1,8 @@
 
 /*STYLING FOR INDEX*/
-.main {
-	color: #05a58d;
+.body-main {
+	color: #6ead3a;
 	background-color: #4c4947;
-	margin-top: 15%;
-	padding: 10%;
 }
 
 
@@ -15,25 +13,18 @@
 	padding: 5px;
 }
 
-.profile-usertitle-name {
-	font-size: 34px;
-}
-
-.stats {
+.profile-usertitle {
+	margin-top: 10px;
 	padding: 5px;
-	margin-bottom: 5px;
-}
-.profile-usertitle-handicap {
-	font-size: 18px;
 }
 
-.profile-stat-text {
-	color: #ceccce;
-	font-size: 18px;
+.profile-usertitle-name {
+	color:#6ead3a;
 }
 
-.profile-stat-title {
-	color: #efedef;
+.list-group {
+	background-color: #ceccce;
+	color: #6ead3a;
 }
 
 .profile-userbuttons {
@@ -41,14 +32,9 @@
 	margin-bottom: 5%;
 }
 
-.button-history {
-	background-color: #efedef;
-	color: #05a58d;
-}
-
-.button-match {
-	background-color: #efedef;
-	color: #05a58d;
+.btn-sm {
+	background-color: #6ead3a;;
+	color: #efedef;
 }
 
 /*STYLING FOR HOLE PAGE*/
@@ -58,8 +44,33 @@
 	width:100px;
 }
 
+.btn-submit {
+	background-color: #efedef;
+	color: #6ead3a;
+}
+
+.form-check-label {
+	font-size: 24px;
+}
+
 
 /*STYLING FOR HISTORY PAGE*/
+
+.holes {
+background-color: #ceccce
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .front9, .back9 {
 	margin-bottom: 1em;
 	.hole {
