@@ -63,12 +63,13 @@ router.get('/hole', function (req, res) {
 });
 
 router.get('/history', function (req, res) {
-    var playerhole = 1;
+    var userid = 11;
     //playerhole = hole will be the same as hole number
-    history.all(playerhole, function(data) {
+    history.all(userid, function(data) {
 
         var hbsObject = {
-            score: data
+            score: data,
+            date: data[0].tstamp
         };
         console.log(hbsObject)
         res.render("history", hbsObject);

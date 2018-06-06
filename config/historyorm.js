@@ -14,8 +14,8 @@ function objToSql(ob) {
 
 // The ORM 
 var historyorm = {
-    all: function(tableInput, playerhole, cb) {
-      var queryString = "SELECT * FROM " + tableInput + " WHERE playerhole='"+ playerhole + "';" // WHERE THE PLAYER ID is "this player's ID" 
+    all: function(tableInput, userid, cb) {
+      var queryString = "SELECT * FROM " + tableInput + " WHERE userid='"+ userid + "';" // WHERE THE PLAYER ID is "this player's ID" 
       console.log(queryString);// log the query string before we use it 
       connection.query(queryString, function(err, result) {
         if (err) {
