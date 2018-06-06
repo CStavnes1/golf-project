@@ -1,10 +1,49 @@
+CREATE DATABASE uofmn;
+
+USE uofmn;
+
+CREATE TABLE Users (
+	userid INT AUTO_INCREMENT NOT NULL,
+    accountpass VARCHAR (40) NOT NULL,
+    playername VARCHAR (100) NOT NULL,
+    playerusername VARCHAR (40) NOT NULL,
+    playermatches VARCHAR (400),
+    playerhandicap INT,
+    playeravgscore DECIMAL (10,2),
+    playeravgputtsperhole DECIMAL (10,2),
+    PRIMARY KEY (userid)
+);
+
+CREATE TABLE Course (
+    hole INT NOT NULL,
+    par INT NOT NULL,
+    dt1 INT NOT NULL,
+    dt2 INT NOT NULL,
+    dt3 INT NOT NULL,
+    pacemark INT NOT NULL,
+    holecap INT NOT NULL,  
+    mapurl VARCHAR(250) 
+);
+
+CREATE TABLE Score (
+	matchid INT NOT NULL,
+    tstamp TIMESTAMP,
+    playerhole INT NOT NULL,
+    playertee VARCHAR (50),
+    playerscore INT NOT NULL,
+    playerputts INT NOT NULL,
+    playernotes VARCHAR (1000),
+    userid INT,
+    FOREIGN KEY (userid) REFERENCES users(userid)
+);
+
 /*USER RECORDS*/
 INSERT INTO users
-VALUES (11, "asodifjasodifjoajsidf", "Joe Finnegan", "finne132", 12, 14, 82.5, 2.3);
+VALUES (1, "asodifjasodifjoajsidf", "Joe Finnegan", "finne132", 12, 14, 82.5, 2.3);
 INSERT INTO users
-VALUES (11, "asodifjasodifjoajsidf", "Esteban Armendariz", "esteban123", 10, 22, 90.5, 3.3);
+VALUES (2, "asodifjasodifjoajsidf", "Esteban Armendariz", "esteban123", 10, 22, 90.5, 3.3);
 INSERT INTO users
-VALUES (11, "asodifjasodifjoajsidf", "Sean Flick", "flicker123", 6, 15, 95, 2.6);
+VALUES (3, "asodifjasodifjoajsidf", "Sean Flick", "flicker123", 6, 15, 95, 2.6);
 INSERT INTO users
 VALUES (11, "asodifjasodifjoajsidf", "Chris Stavnes", "stav123", 32, 20, 100, 2.0);
 
@@ -65,44 +104,40 @@ VALUES (17, 3, 137, 145, 151, 113, 15, "https://www.google.com/maps/place/Les+Bo
 INSERT INTO Course 
 VALUES (18, 4, 396, 409, 414, 127, 7, "https://www.google.com/maps/place/Les+Bolstad+Golf+Course+Main+Office/@44.9934751,-93.1950744,195m/data=!3m1!1e3!4m5!3m4!1s0x0:0x23ab5e6d7ae6b3c7!8m2!3d44.9921644!4d-93.1960703");
 
-INSERT INTO users
-VALUES (1, "asodifjasodifjoajsidf", "Joe Finnegan", "finne132", 12, 14, 82.5, 2.3);
-
-
 /*SCORE RECORDS*/
 INSERT INTO score
-VALUES ((NOW()), 1, "white", 5, 2, "missed green to the left", 11);
+VALUES (1, (NOW()), 1, "white", 5, 2, "missed green to the left", 11);
 INSERT INTO score
-VALUES ((NOW()), 2, "white", 4, 2, "hit fairway awesome par", 11);
+VALUES (1, (NOW()), 2, "white", 4, 2, "hit fairway awesome par", 11);
 INSERT INTO score
-VALUES ((NOW()), 3, "white", 5, 3, "bad three putt", 11);
+VALUES (1, (NOW()), 3, "white", 5, 3, "bad three putt", 11);
 INSERT INTO score
-VALUES ((NOW()), 4, "white", 5, 2, "missed green to the left", 11);
+VALUES (1, (NOW()), 4, "white", 5, 2, "missed green to the left", 11);
 INSERT INTO score
-VALUES ((NOW()), 5, "white", 4, 2, "hit fairway awesome par", 11);
+VALUES (1, (NOW()), 5, "white", 4, 2, "hit fairway awesome par", 11);
 INSERT INTO score
-VALUES ((NOW()), 6, "white", 5, 3, "bad three putt", 11);
+VALUES (1, (NOW()), 6, "white", 5, 3, "bad three putt", 11);
 INSERT INTO score
-VALUES ((NOW()), 7, "white", 5, 2, "", 11);
+VALUES (1, (NOW()), 7, "white", 5, 2, "", 11);
 INSERT INTO score
-VALUES ((NOW()), 8, "white", 4, 2, "", 11);
+VALUES (1, (NOW()), 8, "white", 4, 2, "", 11);
 INSERT INTO score
-VALUES ((NOW()), 9, "white", 5, 3, "", 11);
+VALUES (1, (NOW()), 9, "white", 5, 3, "", 11);
 INSERT INTO score
-VALUES ((NOW()), 10, "white", 5, 2, "", 11);
+VALUES (1, (NOW()), 10, "white", 5, 2, "", 11);
 INSERT INTO score
-VALUES ((NOW()), 11, "white", 4, 2, "hit fairway awesome par", 11);
+VALUES (1, (NOW()), 11, "white", 4, 2, "hit fairway awesome par", 11);
 INSERT INTO score
-VALUES ((NOW()), 12, "white", 5, 3, "", 11);
+VALUES (1, (NOW()), 12, "white", 5, 3, "", 11);
 INSERT INTO score
-VALUES ((NOW()), 13, "white", 5, 3, "bad three putt", 11);
+VALUES (1, (NOW()), 13, "white", 5, 3, "bad three putt", 11);
 INSERT INTO score
-VALUES ((NOW()), 14, "white", 5, 2, "missed fairway", 11);
+VALUES (1, (NOW()), 14, "white", 5, 2, "missed fairway", 11);
 INSERT INTO score
-VALUES ((NOW()), 15, "white", 4, 2, "", 11);
+VALUES (1, (NOW()), 15, "white", 4, 2, "", 11);
 INSERT INTO score
-VALUES ((NOW()), 16, "white", 5, 3, "missed fairway", 11);
+VALUES (1, (NOW()), 16, "white", 5, 3, "missed fairway", 11);
 INSERT INTO score
-VALUES ((NOW()), 17, "white", 4, 2, "", 11);
+VALUES (1, (NOW()), 17, "white", 4, 2, "", 11);
 INSERT INTO score
-VALUES ((NOW()), 18, "white", 5, 3, "finished strong on 18", 11);
+VALUES (1, (NOW()), 18, "white", 5, 3, "finished strong on 18", 11);
