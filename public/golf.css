@@ -44,6 +44,10 @@
 	width:100px;
 }
 
+.panel-heading{
+	color: #6ead3a !important;
+}
+
 .btn-submit {
 	background-color: #efedef;
 	color: #6ead3a;
