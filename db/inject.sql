@@ -107,38 +107,38 @@ VALUES (18, 4, 396, 409, 414, 127, 7, "https://www.google.com/maps/place/Les+Bol
 
 /*SCORE RECORDS*/
 INSERT INTO score
-VALUES (1, (NOW()), 1, "white", 5, 2, "missed green to the left", 11);
+VALUES (1, (NOW()), 1, "white", 5, 2, "missed green to the left", 1);
 INSERT INTO score
-VALUES (1, (NOW()), 2, "white", 4, 2, "hit fairway awesome par", 11);
+VALUES (1, (NOW()), 2, "white", 4, 2, "hit fairway awesome par", 1);
 INSERT INTO score
-VALUES (1, (NOW()), 3, "white", 5, 3, "bad three putt", 11);
+VALUES (1, (NOW()), 3, "white", 5, 3, "bad three putt", 1);
 INSERT INTO score
-VALUES (1, (NOW()), 4, "white", 5, 2, "missed green to the left", 11);
+VALUES (1, (NOW()), 4, "white", 5, 2, "missed green to the left", 1);
 INSERT INTO score
-VALUES (1, (NOW()), 5, "white", 4, 2, "hit fairway awesome par", 11);
+VALUES (1, (NOW()), 5, "white", 4, 2, "hit fairway awesome par", 1);
 INSERT INTO score
-VALUES (1, (NOW()), 6, "white", 5, 3, "bad three putt", 11);
+VALUES (1, (NOW()), 6, "white", 5, 3, "bad three putt", 1);
 INSERT INTO score
-VALUES (1, (NOW()), 7, "white", 5, 2, "", 11);
+VALUES (1, (NOW()), 7, "white", 5, 2, "", 1);
 INSERT INTO score
-VALUES (1, (NOW()), 8, "white", 4, 2, "", 11);
+VALUES (1, (NOW()), 8, "white", 4, 2, "", 1);
 INSERT INTO score
-VALUES (1, (NOW()), 9, "white", 5, 3, "", 11);
+VALUES (1, (NOW()), 9, "white", 5, 3, "", 1);
 INSERT INTO score
-VALUES (1, (NOW()), 10, "white", 5, 2, "", 11);
+VALUES (1, (NOW()), 10, "white", 5, 2, "", 1);
 INSERT INTO score
-VALUES (1, (NOW()), 11, "white", 4, 2, "hit fairway awesome par", 11);
+VALUES (1, (NOW()), 11, "white", 4, 2, "hit fairway awesome par", 1);
 INSERT INTO score
-VALUES (1, (NOW()), 12, "white", 5, 3, "", 11);
+VALUES (1, (NOW()), 12, "white", 5, 3, "", 1);
 INSERT INTO score
-VALUES (1, (NOW()), 13, "white", 5, 3, "bad three putt", 11);
+VALUES (1, (NOW()), 13, "white", 5, 3, "bad three putt", 1);
 INSERT INTO score
-VALUES (1, (NOW()), 14, "white", 5, 2, "missed fairway", 11);
+VALUES (1, (NOW()), 14, "white", 5, 2, "missed fairway", 1);
 INSERT INTO score
-VALUES (1, (NOW()), 15, "white", 4, 2, "", 11);
+VALUES (1, (NOW()), 15, "white", 4, 2, "", 1);
 INSERT INTO score
-VALUES (1, (NOW()), 16, "white", 5, 3, "missed fairway", 11);
+VALUES (1, (NOW()), 16, "white", 5, 3, "missed fairway", 1);
 INSERT INTO score
-VALUES (1, (NOW()), 17, "white", 4, 2, "", 11);
+VALUES (1, (NOW()), 17, "white", 4, 2, "", 1);
 INSERT INTO score
-VALUES (1, (NOW()), 18, "white", 5, 3, "finished strong on 18", 11);
+VALUES (1, (NOW()), 18, "white", 5, 3, "finished strong on 18", 1);
