@@ -4,6 +4,10 @@ var register = function(Handlebars) {
       inc: function(value, options)
       {
           return parseInt(value) + 1;
+      },
+      dec: function(value, options)
+      {
+          return parseInt(value) - 1;
       }
     };
   

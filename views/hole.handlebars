@@ -72,13 +72,16 @@
 
     <nav aria-label="...">
 
-        <form action="/hole/{{inc this.hole}}?_method=PUT" method="GET">
-			          <button class="btn-primary" type="submit">Next Hole!</button>
-		</form>
+        
         <!-- BUTTONS -->
         <div class="col-xs-12 profile-userbuttons">
-            <button type="button" class="btn btn-history btn-sm">Previous Hole</button>
-            <button type="button" class="btn btn-new btn-sm">Next Hole</button>
+            <form action="/hole/{{inc this.hole}}?_method=PUT" method="GET">
+			          <button class="btn-primary" type="submit">Next Hole</button>
+		</form>
+
+        <form action="/hole/{{dec this.hole}}?_method=PUT" method="GET">
+			          <button class="btn-primary" type="submit">Previous Hole</button>
+		</form>
         </div>
     </nav>
 {{/each}}

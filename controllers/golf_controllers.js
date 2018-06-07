@@ -62,6 +62,11 @@ router.get('/hole', function (req, res) {
     
 });
 
+router.get('/hole/0', function (req, res) {
+        res.redirect("/player");
+    });
+    
+
 router.get('/hole/:id', function (req, res) {
     var holeid = req.params.id;
     //holeid will be the same as hole number

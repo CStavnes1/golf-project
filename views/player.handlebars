@@ -39,8 +39,12 @@
 
                     <!-- BUTTONS -->
                     <div class="col-xs-12 profile-userbuttons">
-                        <button type="button" class="btn-sm">Match History</button>
-                        <button type="button" class="btn-sm">New Match</button>
+                        <form action="/history?_method=PUT" method="GET">
+			            <button class="btn-primary" type="submit">Match History</button>
+		                </form>
+                        <form action="/hole?_method=PUT" method="GET">
+			            <button class="btn-primary" type="submit">New Match!</button>
+		                </form>
                     </div>
                 </div>
             </div>
