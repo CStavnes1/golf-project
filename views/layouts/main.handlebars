@@ -17,7 +17,7 @@
     <!-- local stylesheet -->
     <link rel='stylesheet' type='text/css' href='/golf.css'/>
 
-    
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
     <!-- AUTHENTICATION --> 
 
@@ -109,55 +109,115 @@ firebase.initializeApp(config);
     };
   </script>
   </head>
-  <header>
   
-  <header class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            
-            <a class="navbar-brand" href="#">Brand</a>
+  
+  <header class="navbar navbar-default container ">
+  
+        <div class="navbar-header ">
+            <a class="navbar-brand" href="#"></a>
         </div>
 
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right ">
                 <li>
-                  <div class="btn-group">
+                  <div class="btn-group ">
                     <button class="btn btn-danger " id="quickstart-sign-in">Sign in with Google</button>                    
                     </ul>
                   
                 </li>
             </ul>
-        </div><!--/.navbar-collapse -->
+        </div>
+    </div>
     </div>
 </header>
 
 
 
- <!-- Container for the demo -->
+   <body>
+     <center>
+       <div class="body-main container">
+          <!-- handlebars body -->
+           {{{ body }}}
+       </div>
+      
 
 
-  
-  <body>
-    <center>
-    <div class="body-main">
-      <!-- handlebars body -->
-      {{{ body }}}
-    </div>
     <hr>
-    <footer class="center footer">
-      <center>
-        <div class="container">
-           Information for DEBUGGING:
+
+<!-- Footer -->
+<footer class="page-footer font-small blue pt-4 mt-4">
+
+  <!-- Footer Links -->
+  <div class="container-fluid text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      
+
+        <!-- Content -->
+        <h5 class="text-uppercase"> Welcome to Golf 360</h5>
+       
+
+      
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <!-- Grid column -->
+   
+
+        <!-- Links -->
+        <h5 class="text-uppercase">Links</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="/player">Check Your Stats</a>
+          </li>
+          <li>
+            <a href="/hole">Hole Info</a>
+          </li>
+          <li>
+            <a href="/history">Check Your History</a>
+          </li>
+          
+        </ul>
+
+      
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2018 Copyright:
+   University of MN
+  </div>
+  <!-- Copyright -->
+
+ </footer>
+
+<!-- Footer -->
+      {{!-- <footer class="center footer">
+        <center>
+
+          <p></p> --}}
+        {{!-- <div class="container">
+           THIS INFORMATION IS FOR DEMONSTRATION PURPOSES ONLY:
           <!-- Container where we'll display the user details -->
           <div class="quickstart-user-details-container">
             Firebase sign-in status: <span id="quickstart-sign-in-status">Unknown</span>
             <div>Firebase auth <code>currentUser</code> object value:</div>
             <pre><code id="quickstart-account-details">null</code></pre>
-            <div>Google OAuth Access Token:</div>
-            <pre><code id="quickstart-oauthtoken">null</code></pre>
-          </div>
-        </div>
+          </div> --}}
+        {{!-- </div>
       </center>
-    </footer>
+    </footer> --}}
+
+
   </body>
   
   </html>

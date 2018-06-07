@@ -1,23 +1,36 @@
 
 /* Styling for main */
+html { font-family: 'Source Sans Pro', sans-serif;}
 
+
+footer { text-align: center;
+
+}
+
+ .text-uppercase{ 
+	 font-size: 18px;
+ }
 #quickstart-sign-in {
 	margin-top: 10px
  }
 
+ a img { display:block}
 /*STYLING FOR INDEX*/
 
-
-
-
-.body-main {
-	color: #6ead3a;
-	background-color: #4c4947;
+.container {
+	background-color: #6ead3a;
 }
 
 
 
+
+#map {
+	height: 100%;
+  }
+
 /*STYLING FOR PLAYER PAGE*/
+.profile { font-size: 20px;}
+
 .profile-usertitle {
 	margin-top: 10px;
 	padding: 5px;
@@ -29,12 +42,12 @@
 }
 
 .profile-usertitle-name {
-	color:#6ead3a;
+	color:#005A31
 }
 
 .list-group {
 	background-color: #ceccce;
-	color: #6ead3a;
+	
 }
 
 .profile-userbuttons {
@@ -42,16 +55,18 @@
 	margin-bottom: 5%;
 }
 
-.btn-sm {
-	background-color: #6ead3a;;
-	color: #efedef;
-}
 
 /*STYLING FOR HOLE PAGE*/
 .img-responsive {
 	transform: rotate(90deg);
 	height: 300px;
 	width:100px;
+}
+
+.panel-heading{
+	color: #005A31 !important;
+font-size: 20px;
+
 }
 
 .btn-submit {
@@ -65,67 +80,18 @@
 
 
 /*STYLING FOR HISTORY PAGE*/
-
 .holes {
-background-color: #ceccce
+	background-color: #ceccce;
+	text-align: center;
+
+}
+.par {
+	text-align: center;
+}
+.center {
+	align-items: center
 }
 
-
-
-
-
-
-
-
-
-
-
-
-.front9, .back9 {
-	margin-bottom: 1em;
-	.hole {
-		background-color: #f63;
-		color: #fff;
-		span {padding: .5em 0;}
-	}
-	.par {
-		background-color: #ccc;
-		color: #777;
-		span {padding: .25em 0;}
-	}
-	.score {
-		color: #f63;
-		span {padding: .75em 0;}
-	}
-	span {
-		border: rgba(0,0,0,.25) solid 1px;
-		border-width: 0 0 0 1px;
-		display: inline-block;
-		text-align: center;
-		width: 3em;
-		
-		&:first-child {
-			text-align: left;
-			padding-left: 1em;
-			border-width: 0;
-		}
-	}
-}
-
-
-
-.row {
-    margin-top: 40%;
-}
-.wrapper {
-    text-align: center;
-}
-
-@media screen and (min-width: 80em) {
-	.front9, .back9 {
-		display: inline-block
-	}
-	.back9 span:first-child {
-		display: none;
-	}
+thead {
+	margin-bottom: 10px;
 }

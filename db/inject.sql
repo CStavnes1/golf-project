@@ -51,25 +51,25 @@ VALUES (11, "asodifjasodifjoajsidf", "Chris Stavnes", "stav123", 32, 20, 100, 2.
 
 /*COURSE RECORDS*/
 INSERT INTO Course 
-VALUES (1, 4, 375, 393, 399, 14, 4, "https://www.google.com/maps/place/Les+Bolstad+Golf+Course+Main+Office/@44.9940739,-93.1973387,330m/data=!3m1!1e3!4m5!3m4!1s0x0:0x23ab5e6d7ae6b3c7!8m2!3d44.9921644!4d-93.1960703");
+VALUES (1, 4, 375, 393, 399, 14, 4, "/images/satellite/h1.png");
 
 INSERT INTO Course
-VALUES (2, 3, 130, 163, 175, 28, 10, "https://www.google.com/maps/place/Les+Bolstad+Golf+Course+Main+Office/@44.9956053,-93.1952671,118m/data=!3m1!1e3!4m5!3m4!1s0x0:0x23ab5e6d7ae6b3c7!8m2!3d44.9921644!4d-93.1960703");
+VALUES (2, 3, 130, 163, 175, 28, 10, "/images/satellite/h2.png");
 
 INSERT INTO Course
-VALUES (3, 4, 382, 400, 416, 42, 6, "https://www.google.com/maps/place/Les+Bolstad+Golf+Course+Main+Office/@44.9971243,-93.1953648,394m/data=!3m1!1e3!4m5!3m4!1s0x0:0x23ab5e6d7ae6b3c7!8m2!3d44.9921644!4d-93.1960703");
+VALUES (3, 4, 382, 400, 416, 42, 6, "/images/satellite/h3.png");
 
 INSERT INTO Course
-VALUES (4, 4, 340, 355, 359, 56, 2, "https://www.google.com/maps/place/Les+Bolstad+Golf+Course+Main+Office/@44.9975555,-93.193851,282m/data=!3m1!1e3!4m5!3m4!1s0x0:0x23ab5e6d7ae6b3c7!8m2!3d44.9921644!4d-93.1960703");
+VALUES (4, 4, 340, 355, 359, 56, 2, "/images/satellite/h4.png");
 
 INSERT INTO Course 
-VALUES (5, 3, 135, 159, 167, 70, 16, "https://www.google.com/maps/place/Les+Bolstad+Golf+Course+Main+Office/@44.9976245,-93.19211,195m/data=!3m1!1e3!4m5!3m4!1s0x0:0x23ab5e6d7ae6b3c7!8m2!3d44.9921644!4d-93.1960703");
+VALUES (5, 3, 135, 159, 167, 70, 16, "/images/satellite/h5.png");
 
 INSERT INTO Course
-VALUES (6, 4, 294, 306, 326, 84, 18, "https://www.google.com/maps/place/Les+Bolstad+Golf+Course+Main+Office/@44.9973814,-93.1901093,233m/data=!3m1!1e3!4m5!3m4!1s0x0:0x23ab5e6d7ae6b3c7!8m2!3d44.9921644!4d-93.1960703");
+VALUES (6, 4, 294, 306, 326, 84, 18, "/images/satellite/h6.png");
 
 INSERT INTO Course
-VALUES (7, 5, 450, 464, 476, 99, 12, "https://www.google.com/maps/place/Les+Bolstad+Golf+Course+Main+Office/@44.9973814,-93.1901093,233m/data=!3m1!1e3!4m5!3m4!1s0x0:0x23ab5e6d7ae6b3c7!8m2!3d44.9921644!4d-93.1960703");
+VALUES (7, 5, 450, 464, 476, 99, 12, "/images/satellite/h7.png");
 
 INSERT INTO Course 
 VALUES (8, 3, 178, 185, 195, 113, 8, "https://www.google.com/maps/place/Les+Bolstad+Golf+Course+Main+Office/@44.9962018,-93.1935872,164m/data=!3m1!1e3!4m5!3m4!1s0x0:0x23ab5e6d7ae6b3c7!8m2!3d44.9921644!4d-93.1960703");

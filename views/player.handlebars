@@ -1,14 +1,15 @@
 
-<div class="container">
+
     <div class="profile">
             <div class="col-xs-12">
                 <div class="profile-main">
-
+<br>
                     <!-- USERPIC -->
                     <div class="profile-userpic">
                         <img src="https://gravatar.com/avatar/31b64e4876d603ce78e04102c67d6144?s=80&d=https://codepen.io/assets/avatars/user-avatar-80x80-bdcd44a3bfb9a5fd01eb8b86f9e033fa1a9897c3a15b33adfc2649a002dab1b6.png"
                             class="profilr-userpic" alt="">
                     </div>
+                    <br>
                     {{#each users}}
                     <!-- USER NAME and HANDICAP -->
                     <div class="well well-sm">
@@ -39,12 +40,24 @@
 
                     <!-- BUTTONS -->
                     <div class="col-xs-12 profile-userbuttons">
-                        <button type="button" class="btn-sm">Match History</button>
-                        <button type="button" class="btn-sm">New Match</button>
+                        <form action="/history?_method=PUT" method="GET">
+			            <button class="btn btn-primary btn-lg" type="submit">Match History</button>
+		                </form>
+                        <br>
+                        <form action="/hole?_method=PUT" method="GET">
+			            <button class="btn btn-primary btn-lg" type="submit">New Match!</button>
+		                </form>
                     </div>
                 </div>
             </div>
     </div>
+
+
+
+
+
+
+
 
 
 <script>

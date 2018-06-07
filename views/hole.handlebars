@@ -1,7 +1,7 @@
- <div class="container">
+ 
 {{#each course}}
         <div class="card">
-            <img class="img-responsive" src="/images/Screen Shot 2018-06-03 at 4.31.23 PM.png" alt="golf hole">
+            <img src="{{this.mapurl}}" style="width:100%; height:110px; margin-top:15px; margin-bottom:15px;" alt="satellite image of the hole">
                 <div class="well well-sm">
                     <h2>{{this.hole}}</h2>
                 </div>
@@ -63,21 +63,36 @@
 
                     </div>
                 </div>
-                <div class="panel-body">
-                        <button type="submit" class="btn btn-submit">Mark Score</button>
-                </div>
-      
+       <div class="panel-body">
+-                        <button type="submit" class="btn btn-submit">Mark Score</button>
+-                </div>
             
     </div>
 
     <nav aria-label="...">
+
+        
         <!-- BUTTONS -->
         <div class="col-xs-12 profile-userbuttons">
-            <button type="button" class="btn btn-history btn-sm">Previous Hole</button>
-            <button type="button" class="btn btn-new btn-sm">Next Hole</button>
+            <form action="/hole/{{inc this.hole}}?_method=PUT" method="GET">
+			          <button class="btn btn-primary btn-lg" type="submit">Next Hole</button>
+		</form>
+<br>
+        <form action="/hole/{{dec this.hole}}?_method=PUT" method="GET">
+			          <button class="btn btn-primary btn-lg" type="submit">Previous Hole</button>
+		</form>
         </div>
     </nav>
+
+
+
 {{/each}}
+
+
+
+
+
+
     <script>
 firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
@@ -110,3 +125,6 @@ firebase.auth().onAuthStateChanged(function(user) {
       });
       // [END authstatelistener]
 </script>
+
+
+

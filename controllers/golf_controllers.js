@@ -62,13 +62,33 @@ router.get('/hole', function (req, res) {
     
 });
 
-router.get('/history', function (req, res) {
-    var playerhole = 1;
-    //playerhole = hole will be the same as hole number
-    history.all(playerhole, function(data) {
+router.get('/hole/0', function (req, res) {
+        res.redirect("/player");
+    });
+    
+
+router.get('/hole/:id', function (req, res) {
+    var holeid = req.params.id;
+    //holeid will be the same as hole number
+    hole.all(holeid, function(data) {
 
         var hbsObject = {
-            score: data
+            course: data
+        };
+        console.log(hbsObject)
+        res.render("hole", hbsObject);
+    });
+    
+});
+
+router.get('/history', function (req, res) {
+    var userid = 11;
+    //playerhole = hole will be the same as hole number
+    history.all(userid, function(data) {
+
+        var hbsObject = {
+            score: data,
+            date: data[0].tstamp
         };
         console.log(hbsObject)
         res.render("history", hbsObject);

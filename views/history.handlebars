@@ -1,72 +1,76 @@
 <div class="container">
-{{#each score}}
 	<div class="well well-md">
 		<h2>Round Summary</h2>
-		<p>{{this.tstamp}}</p>
+		{{!-- {{#each score}} --}}
+		<p>{{date}}</p>
+		{{!-- {{/each}} --}}
 	</div>
-	<table class="table table-bordered">
-		<thead class="holes">
-			<tr>
-				<th>1</th>
-				<th>2</th>
-				<th>3</th>
-				<th>4</th>
-				<th>5</th>
-				<th>6</th>
-				<th>7</th>
-				<th>8</th>
-				<th>9</th>
-				<th>total</th>
-			</tr>
-		</thead>
-		<thead>
-			<tr>
-				<th>par 4</th>
-				<th>par 3</th>
-				<th>par 4</th>
-				<th>par 4</th>
-				<th>par 3</th>
-				<th>par 4</th>
-				<th>par 5</th>
-				<th>par 3</th>
-				<th>par 5</th>
-				<th>35</th>
-			</tr>
-			<tbody>
-				<td>{{this.playerscore}}</td>
-			</tbody>
-		</thead>
-		<thead>
-			<tr class="holes">
-				<th>10</th>
-				<th>11</th>
-				<th>12</th>
-				<th>13</th>
-				<th>14</th>
-				<th>15</th>
-				<th>16</th>
-				<th>17</th>
-				<th>18</th>
-				<th>total</th>
-			</tr>
-		</thead>
-		<thead>
-			<tr>
-				<th>par 4</th>
-				<th>par 4</th>
-				<th>par 4</th>
-				<th>par 5</th>
-				<th>par 4</th>
-				<th>par 4</th>
-				<th>par 4</th>
-				<th>par 3</th>
-				<th>par 4</th>
-				<th>36</th>
-			</tr>
-		</thead>
-	</table>
-{{/each}}
+	<div class="well well-md" style="overflow-x:auto;">
+		<table class="table table-striped">
+			<hr>
+			<thead class="holes">
+				<tr>
+					<th>Hole</th>
+					<th>1</th>
+					<th>2</th>
+					<th>3</th>
+					<th>4</th>
+					<th>5</th>
+					<th>6</th>
+					<th>7</th>
+					<th>8</th>
+					<th>9</th>
+					<th>10</th>
+					<th>11</th>
+					<th>12</th>
+					<th>13</th>
+					<th>14</th>
+					<th>15</th>
+					<th>16</th>
+					<th>17</th>
+					<th>18</th>
+				</tr>
+			</thead>
+			<thead class="par">
+				<tr>
+					<th>Par</th>
+					<th>4</th>
+					<th>3</th>
+					<th>4</th>
+					<th>4</th>
+					<th>3</th>
+					<th>4</th>
+					<th>5</th>
+					<th>3</th>
+					<th>5</th>
+					<th>4</th>
+					<th>4</th>
+					<th>4</th>
+					<th>5</th>
+					<th>4</th>
+					<th>4</th>
+					<th>4</th>
+					<th>3</th>
+					<th>4</th>
+				</tr>
+				<tbody class="center">
+					<td>Score</td>
+					{{#each score}}
+					<td>{{this.playerscore}}</td>
+					{{/each}}
+				</tbody>
+			</thead>
+		</table>
+	</div>
 </div>
+
+
+
+
+
+
+
+
 
 	<script>
 		firebase.auth().onAuthStateChanged(function (user) {
