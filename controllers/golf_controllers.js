@@ -62,6 +62,20 @@ router.get('/hole', function (req, res) {
     
 });
 
+router.get('/hole/:id', function (req, res) {
+    var holeid = req.params.id;
+    //holeid will be the same as hole number
+    hole.all(holeid, function(data) {
+
+        var hbsObject = {
+            course: data
+        };
+        console.log(hbsObject)
+        res.render("hole", hbsObject);
+    });
+    
+});
+
 router.get('/history', function (req, res) {
     var userid = 11;
     //playerhole = hole will be the same as hole number

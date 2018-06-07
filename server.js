@@ -9,9 +9,11 @@ app.use(express.static(__dirname + '/public'));
 var PORT = process.env.PORT || 8080;
 
 //handlebars
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.engine("handlebars", exphbs({ 
+    defaultLayout: "main",
+    helpers: require("./public/helpers.js").helpers 
+}));
 app.set("view engine", "handlebars");
-
 
 var routes = require('./controllers/golf_controllers.js');
 app.use('/', routes);
