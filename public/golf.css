@@ -5,7 +5,9 @@
 	background-color: #4c4947;
 }
 
-
+#map {
+	height: 100%;
+  }
 
 /*STYLING FOR PLAYER PAGE*/
 .profile-usertitle {
