@@ -27,25 +27,25 @@ router.get('/', function (req, res) {
 
 router.get('/player', function (req, res) {
     // this quick statement allows it to run without error 
-    // var userid = 2;
-    // // this is where we have to pass in a "userID" value from the login mechanism
-    // golfer.all(userid, function(data) {
-    //     var hbsObject = {
-    //       users: data
-    //     };
-    //     console.log(hbsObject);
-    //     // calculate the player's handicap using their most recent average score value
-    //     // and replace the playerhandicap value in hbsObject with the new value
-    //     // this ensures that the displayed handicap value is always up-to-date 
-    //     let playerhandicap = (((hbsObject.users[0].playeravgscore - 69.3)*113)/117);
-    //     console.log("appx player handicap being calculated");
-    //     hbsObject.users[0].playerhandicap = playerhandicap; 
-    //     console.log("new player handicap calculated to be " + hbsObject.users[0].playerhandicap);
+    var userid = 2;
+    // this is where we have to pass in a "userID" value from the login mechanism
+    golfer.all(userid, function(data) {
+        var hbsObject = {
+          users: data
+        };
+        console.log(hbsObject);
+        // calculate the player's handicap using their most recent average score value
+        // and replace the playerhandicap value in hbsObject with the new value
+        // this ensures that the displayed handicap value is always up-to-date 
+        let playerhandicap = (((hbsObject.users[0].playeravgscore - 69.3)*113)/117);
+        console.log("appx player handicap being calculated");
+        hbsObject.users[0].playerhandicap = playerhandicap; 
+        console.log("new player handicap calculated to be " + hbsObject.users[0].playerhandicap);
 
         // ADD CODE HERE: check if the user is still authenticated using local or session storage , if they are , render the page
-        res.render("player");
+        res.render("player", hbsObject);
         // if they are not, return them to the login page 
-    //   });
+      });
 });
 
 router.get('/hole', function (req, res) {
