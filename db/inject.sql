@@ -11,6 +11,7 @@ CREATE TABLE Users (
     playerhandicap INT,
     playeravgscore DECIMAL (10,2),
     playeravgputtsperhole DECIMAL (10,2),
+    googleid VARCHAR (400),
     PRIMARY KEY (userid)
 );
 
@@ -39,13 +40,13 @@ CREATE TABLE Score (
 
 /*USER RECORDS*/
 INSERT INTO users
-VALUES (1, "asodifjasodifjoajsidf", "Joe Finnegan", "finne132", 12, 14, 82.5, 2.3);
+VALUES (1, "asodifjasodifjoajsidf", "Joe Finnegan", "finne132", 12, 14, 82.5, 2.3, "8i8b05YrMLapopqCC2Fn32tWrVf1");
 INSERT INTO users
-VALUES (2, "asodifjasodifjoajsidf", "Esteban Armendariz", "esteban123", 10, 22, 90.5, 3.3);
+VALUES (2, "asodifjasodifjoajsidf", "Esteban Armendariz", "esteban123", 10, 22, 90.5, 3.3, "9vsd9s029849ehfuyt8029bdw1");
 INSERT INTO users
-VALUES (3, "asodifjasodifjoajsidf", "Sean Flick", "flicker123", 6, 15, 95, 2.6);
+VALUES (3, "asodifjasodifjoajsidf", "Sean Flick", "flicker123", 6, 15, 95, 2.6, "sid3942hsodi30203iid84dht6");
 INSERT INTO users
-VALUES (11, "asodifjasodifjoajsidf", "Chris Stavnes", "stav123", 32, 20, 100, 2.0);
+VALUES (11, "asodifjasodifjoajsidf", "Chris Stavnes", "stav123", 32, 20, 100, 2.0, "so3i4j2o3ihbcoi2o3896ghki7");
 
 
 
