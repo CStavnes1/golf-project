@@ -27,7 +27,7 @@ router.get('/', function (req, res) {
 
 router.get('/player', function (req, res) {
     // this quick statement allows it to run without error 
-    var userid = 2;
+    var userid = 1;
     // this is where we have to pass in a "userID" value from the login mechanism
     golfer.all(userid, function(data) {
         var hbsObject = {
@@ -82,7 +82,7 @@ router.get('/hole/:id', function (req, res) {
 });
 
 router.get('/history', function (req, res) {
-    var userid = 11;
+    var userid = 1;
     //playerhole = hole will be the same as hole number
     history.all(userid, function(data) {
 
