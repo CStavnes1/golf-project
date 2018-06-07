@@ -18,7 +18,8 @@ footer { text-align: center;
 /*STYLING FOR INDEX*/
 
 .container {
-	background-color: #6ead3a;
+	background-color: #4c4947;
+	color: #6ead3a
 }
 
 .btn-danger {
