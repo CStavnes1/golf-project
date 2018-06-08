@@ -1,6 +1,9 @@
 # U of M Golf Course Score Tracking App
 Persona, User Stories, Data Structure: https://docs.google.com/document/d/17xVdjNVwEDpMz-LQwW1o9AHcS_0NBCL5sgAg7i_aLkM/edit
 
+# Presentation and Demo
+https://docs.google.com/presentation/d/1L6u_S4z8b-x_6oBC4NJC7Tuah9tnnZ2NvktnGiymGVI/edit?usp=sharing
+
 # Features 
 Home Page
     - Users will be able to create an ID and password. When a successful login occures, they will be presented with 2 buttons; one for the Course SElection PAge, the other for the Score Management Page. Selection of a button will redirect them to the proper page.
